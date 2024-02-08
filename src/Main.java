@@ -1,5 +1,6 @@
 import cz.engeto.ja.Computer;
 import cz.engeto.ja.ComputerComparator;
+import cz.engeto.ja.ComputerManager;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,7 +8,21 @@ import java.util.Comparator;
 import java.util.List;
 
 public class Main {
+
     public static void main(String[] args) {
+        List<Computer> defaultList = new ArrayList<>();
+        defaultList.add(
+                new Computer("Dell", 2019, 15000));
+        ComputerManager manager = new ComputerManager(defaultList);
+
+        defaultList.add(
+                new Computer("Dell", 2018, 12000));
+
+        System.out.println(manager.getCountOfDellComputers());
+        manager.getComputers().forEach(System.out::println);
+    }
+
+    public static void mainSortTest() {
         List<Computer> computers = new ArrayList<>();
 
         Computer computer1 = new Computer("Dell", 2019, 15000);

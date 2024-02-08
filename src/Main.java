@@ -9,6 +9,8 @@ import java.util.List;
 
 public class Main {
 
+    // Jinak
+
     public static void main(String[] args) {
         List<Computer> defaultList = new ArrayList<>();
         defaultList.add(
@@ -20,6 +22,10 @@ public class Main {
 
         System.out.println(manager.getCountOfDellComputers());
         manager.getComputers().forEach(System.out::println);
+    }
+
+    private static void jinaMetoda() {
+        // ...
     }
 
     public static void mainSortTest() {
